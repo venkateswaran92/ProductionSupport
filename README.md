@@ -1,16 +1,42 @@
-# ProductionSupport - Spring Boot AI Assistant
+# ProductionSupport - AI-Powered Document Assistant
 
-This project demonstrates a RAG (Retrieval-Augmented Generation) system using Spring Boot and Spring AI. It provides a web-based interface for users to ask questions and receive context-aware responses based on reference documents.
+![Application Screenshot](https://via.placeholder.com/1200x600/2d3748/ffffff?text=ProductionSupport+UI+Screenshot)
 
-## Features
+A sophisticated RAG (Retrieval-Augmented Generation) system built with Spring Boot and Spring AI, featuring an intuitive web interface for interacting with your documents through natural language queries.
 
-- Web-based chat interface with real-time responses
-- Document-based AI assistant with RAG capabilities
-- Spring AI integration for vector store and chat capabilities
-- Modern UI with formatted responses (code blocks, links, etc.)
-- Automatic document loading and processing
-- Semantic search for relevant document retrieval
-- Server-Sent Events (SSE) support for real-time updates
+## ✨ Features
+
+### User Interface
+- 🎨 **Modern, Responsive Design**
+  - Clean, intuitive interface that works on all devices
+  - Dark/Light theme support
+  - Animated transitions and loading states
+
+- 💬 **Interactive Chat Interface**
+  - Real-time message streaming
+  - Typing indicators
+  - Message timestamps
+  - Copy-to-clipboard functionality
+  - Support for markdown formatting in responses
+
+- 📂 **Document Management**
+  - Drag-and-drop document upload
+  - Document preview
+  - File type indicators
+  - Upload progress tracking
+
+- 🔍 **Search & Navigation**
+  - Instant document search
+  - Filter by document type
+  - Search history
+  - Suggested queries
+
+### Technical Features
+- 🤖 AI-Powered Document Analysis
+- 📊 Vector-based semantic search
+- ⚡ Real-time updates via SSE
+- 🔄 Automatic document processing
+- 🔒 Secure API key management
 
 ## Prerequisites
 
@@ -19,6 +45,56 @@ This project demonstrates a RAG (Retrieval-Augmented Generation) system using Sp
 - PostgreSQL 14 or later with pgvector extension
 - Docker (optional, for development)
 - OpenAI API key
+
+## 🖥️ UI Components
+
+### 1. Main Chat Interface
+- **Header Bar**
+  - Application logo and title
+  - Theme toggle (light/dark)
+  - User profile/account menu
+
+- **Sidebar**
+  - Document library
+  - Upload new documents
+  - Recent searches
+  - Settings
+
+- **Chat Area**
+  - Message history
+  - Typing indicators
+  - Message status (sent, delivered, read)
+  - Context-aware suggestions
+
+- **Input Area**
+  - Rich text editor with formatting options
+  - File attachment button
+  - Voice input (coming soon)
+  - Send button with loading state
+
+### 2. Document Management
+- **Document Grid/List View**
+  - Thumbnail previews
+  - File metadata
+  - Quick actions (preview, download, delete)
+
+- **Document Preview**
+  - Full-page document viewer
+  - Page navigation
+  - Zoom controls
+  - Text selection and highlighting
+
+### 3. Settings Panel
+- **Profile Settings**
+  - Personal information
+  - Notification preferences
+  - Theme customization
+
+- **AI Settings**
+  - Model selection
+  - Response length
+  - Temperature control
+  - API key management
 
 ## Project Structure
 
@@ -31,6 +107,13 @@ src/main/java/com/psyncopate/rag/rag/
 │   ├── RagRequest.java        # Request DTO
 │   └── RagResponse.java       # Response DTO
 └── service/                   # Service layer implementation
+├── static/                    # Frontend static files
+│   ├── css/                   # Stylesheets
+│   ├── js/                    # JavaScript files
+│   └── images/                # Image assets
+└── templates/                 # Thymeleaf templates
+    ├── index.html            # Main template
+    └── fragments/            # Reusable UI components
 ```
 
 ## Configuration
@@ -81,23 +164,56 @@ vectorstore:
    mvn spring-boot:run
    ```
 
-## Usage
+## 🚀 Getting Started
 
-1. **Web Interface**
-   - Access the application at `http://localhost:8080`
-   - Enter your question in the chat interface
-   - View formatted responses with code blocks, links, and lists
-   - Real-time typing indicator shows when the AI is processing
+### Web Interface Walkthrough
 
-2. **Document Loading**
-   - Place reference documents in `src/main/resources/docs/`
-   - Supported formats: PDF and Excel
-   - Documents are automatically loaded into the vector store
+1. **First-Time Setup**
+   - Sign up for an account or log in
+   - Configure your API keys in Settings
+   - Upload your first document
 
-3. **Document Retrieval**
-   - The system retrieves relevant documents based on semantic similarity
-   - Top 3 most similar documents are used to provide context
-   - Responses include both AI-generated answers and supporting documents
+2. **Main Chat**
+   - Type your question in the message box
+   - Use `@` to reference specific documents
+   - Click the paperclip icon to attach files
+   - Press Enter to send or Shift+Enter for a new line
+
+3. **Document Management**
+   - Drag and drop files into the upload area
+   - View document details by clicking on them
+   - Search through your document library
+   - Organize with tags and folders
+
+4. **Advanced Features**
+   - Use `/commands` for special actions
+   - Bookmark important responses
+   - Export chat history
+   - Share conversations with team members
+
+## 🎨 UI Customization
+
+### Themes
+- **Light Theme**: Clean, distraction-free interface
+- **Dark Theme**: Reduced eye strain for extended use
+- **High Contrast**: Improved accessibility
+
+### Layout Options
+- **Compact View**: See more content on screen
+- **Reading Mode**: Focus on the content
+- **Split Screen**: View documents and chat side by side
+
+## 📱 Mobile Experience
+- Fully responsive design
+- Touch-optimized controls
+- Offline support (coming soon)
+- Push notifications
+
+## 🔄 Real-time Updates
+- See when others are typing
+- Live document updates
+- Synchronized across devices
+- Notification center for important events
 
 ## Components
 
