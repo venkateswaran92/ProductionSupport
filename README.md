@@ -1,42 +1,28 @@
-# ProductionSupport - AI-Powered Document Assistant
+# Kafka Support Assistant
 
-![Application Screenshot](https://via.placeholder.com/1200x600/2d3748/ffffff?text=ProductionSupport+UI+Screenshot)
+![Application Screenshot](https://via.placeholder.com/1200x600/2d3748/ffffff?text=Kafka+Support+Assistant)
 
-A sophisticated RAG (Retrieval-Augmented Generation) system built with Spring Boot and Spring AI, featuring an intuitive web interface for interacting with your documents through natural language queries.
+A production support assistant for Kafka-related queries, built with Spring Boot and Spring AI. This application provides a clean, responsive chat interface for technical support and documentation.
 
 ## ✨ Features
 
 ### User Interface
-- 🎨 **Modern, Responsive Design**
-  - Clean, intuitive interface that works on all devices
+- 🎨 **Clean, Responsive Design**
+  - Mobile-friendly interface
   - Dark/Light theme support
-  - Animated transitions and loading states
+  - Smooth animations and transitions
 
-- 💬 **Interactive Chat Interface**
-  - Real-time message streaming
+- 💬 **Chat Interface**
+  - Real-time message display
   - Typing indicators
-  - Message timestamps
-  - Copy-to-clipboard functionality
-  - Support for markdown formatting in responses
-
-- 📂 **Document Management**
-  - Drag-and-drop document upload
-  - Document preview
-  - File type indicators
-  - Upload progress tracking
-
-- 🔍 **Search & Navigation**
-  - Instant document search
-  - Filter by document type
-  - Search history
-  - Suggested queries
+  - Message formatting support
+  - Simple, focused layout
 
 ### Technical Features
-- 🤖 AI-Powered Document Analysis
-- 📊 Vector-based semantic search
-- ⚡ Real-time updates via SSE
-- 🔄 Automatic document processing
-- 🔒 Secure API key management
+- 🤖 AI-Powered Responses
+- 🔍 Document-based knowledge
+- 🔒 Secure authentication
+- ⚡ Server-Sent Events for real-time updates
 
 ## Prerequisites
 
@@ -48,53 +34,27 @@ A sophisticated RAG (Retrieval-Augmented Generation) system built with Spring Bo
 
 ## 🖥️ UI Components
 
-### 1. Main Chat Interface
-- **Header Bar**
-  - Application logo and title
-  - Theme toggle (light/dark)
-  - User profile/account menu
+### 1. Chat Interface
+- **Header**
+  - Application title
+  - Theme toggle
+  - User menu with sign-out option
 
-- **Sidebar**
-  - Document library
-  - Upload new documents
-  - Recent searches
-  - Settings
-
-- **Chat Area**
+- **Message Area**
+  - Welcome message with quick action buttons
   - Message history
   - Typing indicators
-  - Message status (sent, delivered, read)
-  - Context-aware suggestions
+  - Formatted message display
 
 - **Input Area**
-  - Rich text editor with formatting options
-  - File attachment button
-  - Voice input (coming soon)
-  - Send button with loading state
+  - Simple text input
+  - Send button
+  - Basic message formatting
 
-### 2. Document Management
-- **Document Grid/List View**
-  - Thumbnail previews
-  - File metadata
-  - Quick actions (preview, download, delete)
-
-- **Document Preview**
-  - Full-page document viewer
-  - Page navigation
-  - Zoom controls
-  - Text selection and highlighting
-
-### 3. Settings Panel
-- **Profile Settings**
-  - Personal information
-  - Notification preferences
-  - Theme customization
-
-- **AI Settings**
-  - Model selection
-  - Response length
-  - Temperature control
-  - API key management
+### 2. User Authentication
+- Login page
+- Secure session management
+- User greeting in the header
 
 ## Project Structure
 
@@ -166,54 +126,32 @@ vectorstore:
 
 ## 🚀 Getting Started
 
-### Web Interface Walkthrough
+### Using the Application
 
-1. **First-Time Setup**
-   - Sign up for an account or log in
-   - Configure your API keys in Settings
-   - Upload your first document
+1. **Login**
+   - Enter your credentials on the login page
+   - You'll be redirected to the chat interface
 
-2. **Main Chat**
-   - Type your question in the message box
-   - Use `@` to reference specific documents
-   - Click the paperclip icon to attach files
-   - Press Enter to send or Shift+Enter for a new line
+2. **Start Chatting**
+   - Type your message in the input field
+   - Press Enter to send
+   - View responses in the message area
 
-3. **Document Management**
-   - Drag and drop files into the upload area
-   - View document details by clicking on them
-   - Search through your document library
-   - Organize with tags and folders
+3. **Quick Actions**
+   - Use the suggestion chips for common queries
+   - Toggle between light/dark theme
+   - Sign out from the user menu
 
-4. **Advanced Features**
-   - Use `/commands` for special actions
-   - Bookmark important responses
-   - Export chat history
-   - Share conversations with team members
-
-## 🎨 UI Customization
+## 🎨 Interface
 
 ### Themes
-- **Light Theme**: Clean, distraction-free interface
-- **Dark Theme**: Reduced eye strain for extended use
-- **High Contrast**: Improved accessibility
+- **Dark Theme**: Default theme for better visibility
+- **Light Theme**: Alternative light color scheme
 
-### Layout Options
-- **Compact View**: See more content on screen
-- **Reading Mode**: Focus on the content
-- **Split Screen**: View documents and chat side by side
-
-## 📱 Mobile Experience
-- Fully responsive design
-- Touch-optimized controls
-- Offline support (coming soon)
-- Push notifications
-
-## 🔄 Real-time Updates
-- See when others are typing
-- Live document updates
-- Synchronized across devices
-- Notification center for important events
+### Responsive Design
+- Adapts to different screen sizes
+- Touch-friendly controls
+- Optimized for both desktop and mobile use
 
 ## Components
 
